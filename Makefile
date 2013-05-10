@@ -29,7 +29,7 @@ $(projectname).dvi : $(figures) $(projectname).tex $(projectname).bib $(otherfil
 	$(TEX) $(projectname); \
 	$(BIBTEX) $(projectname); \
 	while ($(TEX) $(projectname) ; \
-	grep -q "Rerun to get citations correct." $(projectname).log ) do true ; \
+	grep -q "Rerun to get citations correct." $(projectname).log || grep -q "There were undefined references." $(projectname).log ) do true ; \
 	done
 
 # keep .eps files in the same directory as the .fig files
