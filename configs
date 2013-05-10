@@ -1,0 +1,8 @@
+# This will be the name of your tex and bib files.
+projectname = article
+
+# Include here all the images used in your document.
+figures = image1.eps image2.eps
+
+# Other required files.
+otherfiles = intro.tex secondchapter.tex
